@@ -10,7 +10,7 @@ const UseEffectPage = () => {
 
   React.useEffect(() => {
     const message = ` dependency added, [count]: ${count}`;
-    console.log("🚀 ~ file: index.tsx:7 ~ React.useEffect ~ message:", message);
+    console.log("🚀 ~ file: index.tsx:13 ~ React.useEffect ~ message:", message);
   }, [count]);
 
   return (

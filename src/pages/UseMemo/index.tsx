@@ -12,7 +12,7 @@ const UseMemoPage = () => {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const smallData = React.useMemo(() => {
-        console.log("🚀 ~ file: index.tsx:13 ~ UseMemoPage ~ smallData")
+        console.log("🚀 ~ file: index.tsx:14 ~ UseMemoPage ~ smallData")
         return [
             { small: 12 }
         ]
