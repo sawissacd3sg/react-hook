@@ -2,6 +2,8 @@ import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import UseEffectPage from "./pages/UseEffect";
 import UseMemoPage from "./pages/UseMemo";
+import MemoPage from "./pages/Memo";
+import UseRefPage from "./pages/UseRef";
 
 function App() {
   const noPaddingMargin = {
@@ -19,8 +21,12 @@ function App() {
         <li>
           <NavLink to={"/useMemo"}>UseMemo</NavLink>
         </li>
-        <li></li>
-        <li></li>
+        <li>
+          <NavLink to={"/memo"}>Memo</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/useRef"}>UseRef</NavLink>
+        </li>
         <li></li>
       </ul>
       <Routes>
@@ -34,6 +40,8 @@ function App() {
         />
         <Route path="/useEffect" element={<UseEffectPage />} />
         <Route path="/useMemo" element={<UseMemoPage />} />
+        <Route path="/memo" element={<MemoPage />} />
+        <Route path="/useRef" element={<UseRefPage />} />
       </Routes>
     </div>
   );
