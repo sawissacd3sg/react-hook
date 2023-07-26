@@ -13,6 +13,7 @@ const Input1: React.FC<InputInterface> = (props) => {
   );
 };
 
+//I use forwardRef with useRef
 const Input2 = React.forwardRef((props: InputInterface, ref: any) => {
   return <input value={props.value} ref={ref} onChange={props.onChange} />;
 });
@@ -20,6 +21,7 @@ const Input2 = React.forwardRef((props: InputInterface, ref: any) => {
 const UseRefPage = () => {
   const input1Ref = useRef(null);
   const [input1Val, setInput1Val] = useState("Bad ref input 1");
+  
   const input2Ref = useRef<HTMLInputElement | null>(null);
   const [input2Val, setInput2Val] = useState("Good ref input 2");
 
@@ -34,7 +36,7 @@ const UseRefPage = () => {
           setInput1Val(ev.target.value);
         }}
       />
-      {/* This component will not throw errors cuz it a proper function*/}
+      {/* This component will not throw errors cuz it a proper way to be used*/}
       <Input2
         ref={input2Ref}
         value={input2Val}

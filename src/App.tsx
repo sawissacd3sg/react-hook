@@ -4,6 +4,7 @@ import UseEffectPage from "./pages/UseEffect";
 import UseMemoPage from "./pages/UseMemo";
 import MemoPage from "./pages/Memo";
 import UseRefPage from "./pages/UseRef";
+import ZustandPage from "./pages/Zustand";
 
 function App() {
   const noPaddingMargin = {
@@ -27,7 +28,9 @@ function App() {
         <li>
           <NavLink to={"/useRef"}>UseRef</NavLink>
         </li>
-        <li></li>
+        <li>
+          <NavLink to={"/zustand"}>Zustand</NavLink>
+        </li>
       </ul>
       <Routes>
         <Route
@@ -42,6 +45,7 @@ function App() {
         <Route path="/useMemo" element={<UseMemoPage />} />
         <Route path="/memo" element={<MemoPage />} />
         <Route path="/useRef" element={<UseRefPage />} />
+        <Route path="/zustand" element={<ZustandPage />} />
       </Routes>
     </div>
   );
