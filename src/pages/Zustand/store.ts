@@ -10,7 +10,7 @@ interface Action {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   increment: any;
 }
-
+//             remove this `()` if you are using js---v
 export const useZustandStore = create<State & Action>()(
   immer((set) => ({
     count: 0,
