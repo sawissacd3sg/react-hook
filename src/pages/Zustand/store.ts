@@ -7,9 +7,16 @@ interface State {
 }
 
 interface Action {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  increment: any;
+  increment: () => void;
 }
+
+// const [st, setSt] = useState({
+//   count: 0,
+//   email: "iz@gmail.com",
+// });
+
+// setSt({...st, email: "as@gmail.com"})
+
 //             remove this `()` if you are using js---v
 export const useZustandStore = create<State & Action>()(
   immer((set) => ({
@@ -22,7 +29,6 @@ export const useZustandStore = create<State & Action>()(
 );
 
 //! if you want to save the state when refresh use persist
-
 export const useZustandStoreStorage = create<State & Action>()(
   persist(
     immer((set) => ({
